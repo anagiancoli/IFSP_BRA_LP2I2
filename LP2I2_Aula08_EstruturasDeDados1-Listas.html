@@ -14663,6 +14663,46 @@ Removendo os espaços em branco da lista c: ['laboratório', 'carnaval', 'alegri
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Utilizando expressões lambda: </span>
+<span class="c1"># Uma expressão lambda permite escrever funções anônimas/sem-nome </span>
+<span class="c1"># usando apenas uma linha de código.</span>
+<span class="c1"># variável key armazena o resultado da expressão lambda.</span>
+<span class="c1"># expressão: date: datetime.strptime(date, "%d-%b-%y")</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">my_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'5-Nov-18'</span><span class="p">,</span> <span class="s1">'25-Mar-17'</span><span class="p">,</span> <span class="s1">'1-Nov-18'</span><span class="p">,</span> <span class="s1">'7-Mar-17'</span><span class="p">]</span>
+<span class="n">my_dates</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="s2">"</span><span class="si">%d</span><span class="s2">-%b-%y"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dates</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['7-Mar-17', '25-Mar-17', '1-Nov-18', '5-Nov-18']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14718,9 +14758,25 @@ Removendo os espaços em branco da lista c: ['laboratório', 'carnaval', 'alegri
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p><div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    &lt;/div&gt;
+&lt;/div&gt;
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</div>
+</div>
+</div>
     </div>
   </div>
-</body>
+</div></div></body>
 
  
 
