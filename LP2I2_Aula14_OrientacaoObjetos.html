@@ -13266,14 +13266,14 @@ Nome Completo: Ana Paula Müller Giancoli
 <ul>
 <li>Comentando sobre o código acima:  </li>
 </ul>
-<h4 id="Método--init-(self,-nome,-idade):"><strong>Método <strong> </strong>init<strong> </strong>(self, nome, idade)</strong>:<a class="anchor-link" href="#M%C3%A9todo--init-(self,-nome,-idade):">¶</a></h4><ul>
+<h4 id="Método-__init__(self,-nome,-idade):"><strong>Método _<strong>_init__</strong>(self, nome, idade)</strong>:<a class="anchor-link" href="#M%C3%A9todo-__init__(self,-nome,-idade):">¶</a></h4><ul>
 <li>Conceitualmente, <strong>uma função</strong> que faz parte de uma classe chama-se <strong>método</strong>.   </li>
 <li>Tudo o que foi aprendido em <strong>função aplica-se aos métodos</strong>.  </li>
 <li>Os <strong>dois underscores antes e depois</strong> servem para diferenciar <strong>nomes default de Python</strong> com os criados por nós.  </li>
-<li>O <strong>método <strong> </strong>init<strong> </strong>(self)</strong> é um <strong>método especial do Python</strong> que <strong>é executado automaticamente sempre que uma instância é criada baseada na classe Cachorro</strong>.  </li>
+<li>O <strong>método _<strong>_init__</strong>(self)</strong> é um <strong>método especial do Python</strong> que <strong>é executado automaticamente sempre que uma instância é criada baseada na classe Cachorro</strong>.  </li>
 <li>O <strong>método</strong> recebe 3 parâmetros: <strong>self, nome e idade</strong>:  <ul>
 <li><strong>self</strong>: <em>é um parâmetro obrigatório na definição de um método e deve estar sempre antes dos demais parâmetros</em>.  <ul>
-<li>Quando o Python chama o <strong>método <strong> </strong>init<strong> </strong>(self)</strong> para criar uma instância de Cachorro, <strong>a chamada passará o argumento self automaticamente</strong>.  </li>
+<li>Quando o Python chama o <strong>método _<strong>_init__</strong>(self)</strong> para criar uma instância de Cachorro, <strong>a chamada passará o argumento self automaticamente</strong>.  </li>
 <li>Toda <strong>chamada de método associada a uma classe passa o argumento self</strong>.  </li>
 <li>O <strong>argumento é uma referência à própria instância automaticamente</strong>, permitindo acesso aos atributos e métodos da instância individual da classe.  </li>
 </ul>
@@ -13340,7 +13340,7 @@ O meu cachorro tem 10 anos.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.4.-Chamando-Métodos--de-uma-Instância-criada-_meucachorro-de-uma-classe-Cachorro(-)">1.4. Chamando Métodos  de uma Instância criada _meu<em>cachorro</em> de uma classe Cachorro( )<a class="anchor-link" href="#1.4.-Chamando-M%C3%A9todos--de-uma-Inst%C3%A2ncia-criada-_meucachorro-de-uma-classe-Cachorro(-)">¶</a></h3><ul>
+<h3 id="1.4.-Chamando-Métodos--de-uma-Instância-criada-meu_cachorro-de-uma-classe-Cachorro(-)">1.4. Chamando Métodos  de uma Instância criada meu_cachorro de uma classe Cachorro( )<a class="anchor-link" href="#1.4.-Chamando-M%C3%A9todos--de-uma-Inst%C3%A2ncia-criada-meu_cachorro-de-uma-classe-Cachorro(-)">¶</a></h3><ul>
 <li><strong>Colocando mão na massa!!</strong>  </li>
 <li><strong>meu_cachorro</strong> é a instância criada a partir da <strong>classe Cachorro()</strong>.  <ul>
 <li>Acessando os <strong>métodos sentar() e rolar()</strong>: <strong>meu_cachorro.sentar()</strong>, <strong>meu_cachorro.rolar()</strong>.  </li>
@@ -14171,88 +14171,18 @@ Esse carro tem 133 milhas.
 <li><strong>Exemplos Subclasse</strong>:      <ul>
 <li><strong>Nome da Classe</strong>: CarroEletrico   &lt;---- É a <strong>classe filha, ou subclasse</strong>.  </li>
 <li><strong>Atributos da subclasse</strong>: bateria que é do tipo de uma classe chamada Bateria.  </li>
-<li><strong>Métodos da subclasse</strong>: abastecer_tanque(), descricao_bateria().  </li>
+<li><strong>Métodos da subclasse</strong>: abastecer_tanque( ), descricao_bateria( ).    </li>
 </ul>
 </li>
 </ul>
-<h4 id="2.3.1-Exemplo-Herança-Múltipla">2.3.1 Exemplo Herança Múltipla<a class="anchor-link" href="#2.3.1-Exemplo-Heran%C3%A7a-M%C3%BAltipla">¶</a></h4><ul>
-<li>Consulte <a href="https://www.programiz.com/python-programming/methods/built-in/super">Programiz</a></li>
-</ul>
-
+<h3 id="2.3.1.-Aplicando-Herança">2.3.1. Aplicando Herança<a class="anchor-link" href="#2.3.1.-Aplicando-Heran%C3%A7a">¶</a></h3>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">animalnome</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">animalnome</span><span class="p">,</span> <span class="s1">'é um animal.'</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">Mamifero</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mamiferonome</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">mamiferonome</span><span class="p">,</span> <span class="s1">'é um mamífero.'</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">mamiferonome</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">Naovoadores</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naovoadoresnome</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">naovoadoresnome</span><span class="p">,</span> <span class="s2">"não pode voar."</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naovoadoresnome</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">Naoaquaticos</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naoaquaticonome</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">naoaquaticonome</span><span class="p">,</span> <span class="s2">"não pode nadar."</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naoaquaticonome</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Naoaquaticos</span><span class="p">,</span> <span class="n">Naovoadores</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'Cachorro tem 4 patas.'</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">'Cachorro'</span><span class="p">)</span>
-
-
-<span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
-<span class="n">morcego</span> <span class="o">=</span> <span class="n">Naoaquaticos</span><span class="p">(</span><span class="s1">'Morcego'</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Cachorro tem 4 patas.
-Cachorro é um animal.
-
-Morcego não pode nadar.
-Morcego é um mamífero.
-Morcego é um animal.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Adicionando-um-novo-método-na-classe-mãe-Carro:-abastecer_tanque()-e-um-novo-atributo."><strong>Adicionando um novo método na classe mãe Carro: abastecer_tanque() e um novo atributo.</strong><a class="anchor-link" href="#Adicionando-um-novo-m%C3%A9todo-na-classe-m%C3%A3e-Carro:-abastecer_tanque()-e-um-novo-atributo.">¶</a></h4>
+<h4 id="Adicionando-um-novo-método-na-classe-mãe-Carro:-abastecer_tanque(-)-e-um-novo-atributo."><strong>Adicionando um novo método na classe mãe Carro: abastecer_tanque( ) e um novo atributo.</strong><a class="anchor-link" href="#Adicionando-um-novo-m%C3%A9todo-na-classe-m%C3%A3e-Carro:-abastecer_tanque(-)-e-um-novo-atributo.">¶</a></h4>
 </div>
 </div>
 </div>
@@ -14350,8 +14280,8 @@ Morcego é um animal.
 <li><p><strong>A classe CarroEletrico é definida após a classe Carro, sendo que a classe-filha recebe entre parênteses a classe-mãe</strong>.</p>
 <p><strong>Função super( )</strong></p>
 <ul>
-<li>O <strong>método <strong> </strong>init<strong> </strong>()</strong> aceita as informações necessárias para <strong>criar uma instância de Carro &gt; fabricante, modelo, ano</strong>.  </li>
-<li>Inserimos uma <strong>função chamada super()</strong>, a <em>qual é uma <strong>função especial</strong> que auxilia o Python a <strong>criar conexões entre as classes-filhas e a classe-mãe</strong></em>. Ao chamar a <strong>função super()</strong>, _indica que deve ser chamado o método <strong> </strong>init<strong> </strong>() da classe-mãe de CarroEletrico que confere os <strong>atributos da classe-mãe</strong>.  </li>
+<li>O <strong>método _<strong>_init__</strong>()</strong> aceita as informações necessárias para <strong>criar uma instância de Carro &gt; fabricante, modelo, ano</strong>.  </li>
+<li>Inserimos uma <strong>função chamada super()</strong>, a <em>qual é uma <strong>função especial</strong> que auxilia o Python a <strong>criar conexões entre as classes-filhas e a classe-mãe</strong></em>. Ao chamar a <strong>função super()</strong>, <em>indica que deve ser chamado o método</em> _<strong>_init__</strong>() da classe-mãe de CarroEletrico que confere os <strong>atributos da classe-mãe</strong>.  </li>
 <li>No Pycharm, ele indica do lado esquerdo, com um símbolo circular de que existe uma subclasse CarroEletrico.  </li>
 </ul>
 </li>
@@ -14393,7 +14323,7 @@ Morcego é um animal.
 <li>Qualquer <strong>método da classe-mãe</strong> que por alguma configuração <strong>não atender por completo a classe-filha</strong>, o mesmo <strong>pode ser sobrescrito</strong>.  </li>
 <li>Caso isso seja feito, ao executar, <strong>o método a ser usado será o da classe-filha</strong>.  </li>
 </ul>
-<h4 id="Sobrescrevendo-o-método-abastecer_tanque()">Sobrescrevendo o método abastecer_tanque()<a class="anchor-link" href="#Sobrescrevendo-o-m%C3%A9todo-abastecer_tanque()">¶</a></h4><ul>
+<h4 id="Sobrescrevendo-o-método-abastecer_tanque(-)">Sobrescrevendo o método abastecer_tanque( )<a class="anchor-link" href="#Sobrescrevendo-o-m%C3%A9todo-abastecer_tanque(-)">¶</a></h4><ul>
 <li><strong><em>Para que seja sobrescrito, na classe-filha, criar o método com mesmo nome da classe-mãe</em></strong>.  </li>
 <li>Imagine que temos um <strong>método na classe-mãe que refere-se a controle do tanque de combustível (método abastecer_tanque()). Não faz sentido este método para o carro elétrico, logo poderíamos fazer algo do tipo na classe CarroEletrico</strong>.</li>
 </ul>
@@ -14424,7 +14354,7 @@ Morcego é um animal.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.3.1.-Utilizando-os-Conceitos-de-Herança">2.3.1. Utilizando os Conceitos de Herança<a class="anchor-link" href="#2.3.1.-Utilizando-os-Conceitos-de-Heran%C3%A7a">¶</a></h3><ul>
+<h3 id="2.3.2.-Utilizando-os-Conceitos-de-Herança">2.3.2. Utilizando os Conceitos de Herança<a class="anchor-link" href="#2.3.2.-Utilizando-os-Conceitos-de-Heran%C3%A7a">¶</a></h3><ul>
 <li><strong>Classe Carro Completa</strong></li>
 </ul>
 
@@ -14589,7 +14519,7 @@ Esse modelo de carro não possui tanque!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.4.-Manipulando-Instâncias-como-Atributos">2.4. Manipulando Instâncias como Atributos<a class="anchor-link" href="#2.4.-Manipulando-Inst%C3%A2ncias-como-Atributos">¶</a></h3><ul>
+<h3 id="2.3.3.-Manipulando-Instâncias-como-Atributos">2.3.3. Manipulando Instâncias como Atributos<a class="anchor-link" href="#2.3.3.-Manipulando-Inst%C3%A2ncias-como-Atributos">¶</a></h3><ul>
 <li>Se ao continuarmos implementando a classe CarroEletrico perceberemos que estamos inserindo atributos (tamanho da bateria) e métodos (descrição da bateria) que não são específicos dela e sim de outras classes.  </li>
 <li>Logo, <strong>precisamos criar uma classe Bateria</strong> e <strong>associá-la a classe CarroEletrico</strong>.  </li>
 <li><em>Não é herança, é uma associação simples</em>.  </li>
@@ -14598,7 +14528,7 @@ Esse modelo de carro não possui tanque!
 <li><strong>Exemplos</strong>:      <ul>
 <li><strong>Nome da Classe</strong>: CarroEletrico   &lt;---- É a <strong>classe filha, ou subclasse</strong>.  </li>
 <li><strong>Atributos da subclasse</strong>: bateria que é do tipo de uma <strong>classe chamada Bateria</strong>.  </li>
-<li><strong>Métodos da subclasse</strong>: abastecer_tanque(), descricao_bateria().  </li>
+<li><strong>Métodos da subclasse</strong>: abastecer_tanque( ), descricao_bateria( ).  </li>
 </ul>
 </li>
 </ul>
@@ -14735,7 +14665,7 @@ Esse modelo de carro não possui tanque!
 <span class="c1"># a chamada do método por meio da instância como atributo. Instância: meu_eletrico do tipo CarroEletrico, </span>
 <span class="c1"># Atributo: bateria que é do tipo classe Bateria, logo, o método descrição_bateria() é acionado </span>
 <span class="c1"># por meio do atributo.</span>
-<span class="n">meu_eletrico</span><span class="o">.</span><span class="n">bateria</span><span class="o">.</span><span class="n">descricao_bateria</span><span class="p">()</span>
+<span class="n">meu_eletrico</span><span class="o">.</span><span class="n">bateria</span><span class="o">.</span><span class="n">descricao_bateria</span><span class="p">()</span>      <span class="c1"># &lt;------------- LINHA 35 </span>
 
 <span class="c1"># Abastecendo o tanque ??? Não é carro elétrico?</span>
 <span class="n">meu_eletrico</span><span class="o">.</span><span class="n">abastecer_tanque</span><span class="p">()</span>
@@ -14775,7 +14705,7 @@ Esse modelo de carro não possui tanque!
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Analisando-o-código-acima:">Analisando o código acima:<a class="anchor-link" href="#Analisando-o-c%C3%B3digo-acima:">¶</a></h4><ul>
-<li>_A linha 35 indica ao Python para usar a <strong>Instância meu_eletrico</strong>, encontrar seu <strong>Atributo bateria</strong>, e chamar o <strong>Método descricao_bateria()</strong> associado à <strong>instância de Bateria armazenada no Atributo bateria</strong>_.</li>
+<li>A linha 35 indica ao Python para usar a <strong>Instância meu_eletrico</strong>, encontrar seu <strong>Atributo bateria</strong>, e chamar o <strong>Método descricao_bateria( )</strong> associado à <strong>instância de Bateria armazenada no Atributo bateria</strong>.</li>
 </ul>
 
 </div>
@@ -14796,6 +14726,84 @@ Esse modelo de carro não possui tanque!
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.3.4.-Exemplo-Herança-Múltipla">2.3.4. Exemplo Herança Múltipla<a class="anchor-link" href="#2.3.4.-Exemplo-Heran%C3%A7a-M%C3%BAltipla">¶</a></h3><ul>
+<li>Consulte <a href="https://www.programiz.com/python-programming/methods/built-in/super">Programiz</a>  </li>
+</ul>
+<p><img src="data:image/jpg;base64,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" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">animalnome</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">animalnome</span><span class="p">,</span> <span class="s1">'é um animal.'</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Mamifero</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mamiferonome</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">mamiferonome</span><span class="p">,</span> <span class="s1">'é um mamífero.'</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">mamiferonome</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Naovoadores</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naovoadoresnome</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">naovoadoresnome</span><span class="p">,</span> <span class="s2">"não pode voar."</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naovoadoresnome</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Naoaquaticos</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naoaquaticonome</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">naoaquaticonome</span><span class="p">,</span> <span class="s2">"não pode nadar."</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naoaquaticonome</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Naoaquaticos</span><span class="p">,</span> <span class="n">Naovoadores</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Cachorro tem 4 patas.'</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Mamifero</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">'Cachorro'</span><span class="p">)</span>
+
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<span class="n">morcego</span> <span class="o">=</span> <span class="n">Naoaquaticos</span><span class="p">(</span><span class="s1">'Morcego'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cachorro tem 4 patas.
+Cachorro é um animal.
+
+Morcego não pode nadar.
+Morcego é um mamífero.
+Morcego é um animal.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.-Importação-de-Classes-e-Módulos">3. Importação de Classes e Módulos<a class="anchor-link" href="#3.-Importa%C3%A7%C3%A3o-de-Classes-e-M%C3%B3dulos">¶</a></h3><h3 id="3.1.-Importando-Classes">3.1. Importando Classes<a class="anchor-link" href="#3.1.-Importando-Classes">¶</a></h3><ul>
 <li>Vamos criar o <strong>Módulo chamado carro.py</strong> que conterá <strong>todas as classes referentes a criação de um carro</strong>.  </li>
 <li>Em seguida, criaremos <strong>um arquivo</strong> que irá usar o <strong>Módulo carro.py</strong> para criar <strong>uma instância de um carro elétrico</strong> (meu_carro_eletrico.py) e <strong>um comum</strong> (meu_carro.py).  (Neste caso faremos o código abaixo.)</li>
@@ -14807,10 +14815,106 @@ Esse modelo de carro não possui tanque!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Arquivo carro.py (módulo) contendo as 3 classes: Carro, CarroEletrico, Bateria. </span>
+<span class="c1"># Todas as classes estão definidas e completas.</span>
+
+<span class="c1"># classe Carro</span>
+<span class="k">class</span> <span class="nc">Carro</span><span class="p">:</span>
+    <span class="sd">"""Uma tentativa simples de representar um carro"""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fabricante</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">ano</span><span class="p">):</span>
+        <span class="sd">"""Inicializa os atributos que descrevem um carro. leitura_hodometro valor constante inicial"""</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fabricante</span> <span class="o">=</span> <span class="n">fabricante</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ano</span> <span class="o">=</span> <span class="n">ano</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">leitura_hodometro</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tanque</span> <span class="o">=</span> <span class="mi">0</span>      <span class="c1">#   &lt;------ Criado para armazenar abastecimento do tanque. Default 0 litros.</span>
+
+    <span class="k">def</span> <span class="nf">buscar_nome_descricao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""Devolve um nome descritivo, em formato elegante :)"""</span>
+        <span class="n">nome_extenso</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ano</span><span class="p">)</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fabricante</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">modelo</span>
+        <span class="k">return</span> <span class="n">nome_extenso</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">ler_hodometro</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""Exibe uma frase que mostra a milhagem do carro"""</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Esse carro tem "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">leitura_hodometro</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" milhas."</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">atualizar_hodometro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">milhas</span><span class="p">):</span>
+        <span class="sd">"""Define o valor de leitura do hodômetro com o valor especificado</span>
+<span class="sd">           Rejeita a alteração se for uma tentativa de definir um valor menor</span>
+<span class="sd">           para o hodômetro"""</span>
+        <span class="k">if</span> <span class="n">milhas</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">leitura_hodometro</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">leitura_hodometro</span> <span class="o">=</span> <span class="n">milhas</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Você está tentando reduzir o valor do Hodômetro!"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">incrementar_hodometro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">milhas</span><span class="p">):</span>
+        <span class="sd">""""Soma a quantidade especificada ao valor de leitura do hodômetro"""</span>
+        <span class="k">if</span> <span class="n">milhas</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">leitura_hodometro</span> <span class="o">+=</span> <span class="n">milhas</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Você está tentando reduzir o valor do Hodômetro!"</span><span class="p">)</span>
+
+<span class="c1"># Método criado para abastecer o tanque do carro.            </span>
+    <span class="k">def</span> <span class="nf">abastecer_tanque</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tanque</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tanque</span> <span class="o">+=</span> <span class="n">tanque</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Tanque atualizado para "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tanque</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" litros."</span><span class="p">)</span>   
+          
+<span class="c1"># classe CarroEletrico que herda da classe Carro</span>
+<span class="k">class</span> <span class="nc">CarroEletrico</span><span class="p">(</span><span class="n">Carro</span><span class="p">):</span>
+    <span class="sd">"""Representa aspectos de um carro específicos de veículos elétricos"""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fabricante</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">ano</span><span class="p">):</span>
+        <span class="sd">"""Inicializa os atributos da classe-mãe"""</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">fabricante</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">ano</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bateria</span> <span class="o">=</span> <span class="n">Bateria</span><span class="p">()</span>    <span class="c1">#  &lt;------- Modificado aqui de self.bateria = 70 para self.bateria = Bateria()</span>
+
+        
+    <span class="c1"># Método criado igual ao da classe mãe. Assim o método da classe mãe será sobrescrito por esse.</span>
+    <span class="k">def</span> <span class="nf">abastecer_tanque</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""Carros eletricos não possuem tanques"""</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Esse modelo de carro não possui tanque!"</span><span class="p">)</span>   
+                
+<span class="c1"># classe Bateria que é associada a Classe CarroEletrico por meio do atributo self.bateria que </span>
+<span class="c1"># é do tipo da classe Bateria()        </span>
+<span class="k">class</span> <span class="nc">Bateria</span><span class="p">:</span>
+    <span class="sd">"""Uma tentativa simples de modelar uma bateria para um carro elétrico"""</span>
+    
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tamanho_bateria</span><span class="o">=</span><span class="mi">70</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tamanho_bateria</span> <span class="o">=</span> <span class="n">tamanho_bateria</span>
+
+    <span class="k">def</span> <span class="nf">descricao_bateria</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""Exibe uma frase que descreve a capacidade da bateria"""</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Esse carro tem "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tamanho_bateria</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-kWh de capacidade."</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">buscar_faixa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">"""Exibe uma frase sobre a distância que o carro é capaz de percorrer</span>
+<span class="sd">           de acordo com as especificações da bateria"""</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tamanho_bateria</span> <span class="o">==</span> <span class="mi">70</span><span class="p">:</span>
+            <span class="nb">range</span> <span class="o">=</span> <span class="mi">240</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">tamanho_bateria</span> <span class="o">==</span> <span class="mi">85</span><span class="p">:</span>
+            <span class="nb">range</span> <span class="o">=</span> <span class="mi">270</span>
+
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">"Esse carro pode percorrer aproximadamente "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">range</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">+=</span> <span class="s2">" milhas com a bateria cheia."</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criado o módulo (arquivo) carro.py contendo as 3 classes.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criado o módulo (arquivo) carro.py contendo as 3 classes, criar o arquivo meu_carro.py.</span>
 <span class="c1"># Arquivo meu_carro.py.</span>
 
 <span class="c1"># Importando o módulo carro.py.</span>
@@ -14862,7 +14966,7 @@ Tanque atualizado para 40 litros.
 <div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criado o módulo (arquivo) carro.py contendo as 3 classes.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criado o módulo (arquivo) carro.py contendo as 3 classes, criar o arquivo meu_carro_eletrico.py.</span>
 <span class="c1"># Arquivo meu_carro_eletrico.py.</span>
 
 <span class="c1"># Importando o módulo carro.py.</span>
@@ -14935,7 +15039,8 @@ Esse modelo de carro não possui tanque!
 <div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Arquivo meus_carros.py.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criado o módulo (arquivo) carro.py contendo as 3 classes, criar o arquivo meus_carros.py.</span>
+<span class="c1"># Arquivo meus_carros.py.</span>
 
 <span class="c1"># Importando o módulo carro.py.</span>
 <span class="kn">from</span> <span class="nn">carro</span> <span class="kn">import</span> <span class="n">Carro</span><span class="p">,</span> <span class="n">CarroEletrico</span>
@@ -15178,7 +15283,7 @@ Esse carro pode percorrer aproximadamente 240 milhas com a bateria cheia.
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">idade</span><span class="p">):</span>
         <span class="sd">"""Inicializa os atributos que descrevem uma pessoa."""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">__idade</span> <span class="o">=</span> <span class="n">idade</span>        <span class="c1"># &lt;------ Inserido dois underscore para indicar atributo fracamente privado.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__idade</span> <span class="o">=</span> <span class="n">idade</span>        <span class="c1"># &lt;------ Inserido dois underscore para indicar atributo fortemente privado.</span>
         
 <span class="n">nova_pessoa</span> <span class="o">=</span> <span class="n">Pessoa</span><span class="p">(</span><span class="s1">'Carlos Alberto'</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nova_pessoa</span><span class="o">.</span><span class="n">nome</span><span class="p">)</span>
