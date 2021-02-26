@@ -1,6 +1,6 @@
 ## IFSP_BRA_LP2I2
 
-Aulas da Disciplina Linguagem de Programação II do Curso Análise e Desenvolvimento de Sistemas.  
+Aulas do Componente Curricular Linguagem de Programação II do Curso Análise e Desenvolvimento de Sistemas.  
 
 Para ler os conteúdos publicados, faça o download e abra em qualquer navegador.
 
