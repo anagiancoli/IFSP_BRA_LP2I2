@@ -13644,6 +13644,497 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="7.1.-Formatação-de-Números-float-com-a-função-Saída">7.1. Formatação de Números float com a função Saída<a class="anchor-link" href="#7.1.-Formata%C3%A7%C3%A3o-de-N%C3%BAmeros-float-com-a-fun%C3%A7%C3%A3o-Sa%C3%ADda">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Para maiores detalhes, consulte <a href="https://blog.teclado.com/python-formatting-numbers-for-printing/">Phil, Best</a>.</li>
+</ul>
+<h4 id="Níveis-de-Precisão">Níveis de Precisão<a class="anchor-link" href="#N%C3%ADveis-de-Precis%C3%A3o">¶</a></h4><ul>
+<li>Para definir um nível de precisão, utiliza-se os dois-pontos ( : ), seguido por um ponto decimal ( . ), junto com algum número inteiro representando o grau de precisão. Exemplo: <strong>:.3</strong>.</li>
+<li>Pode ser usado diretamente na função print().</li>
+</ul>
+<h4 id="Especificando-quantidade-de-dígitos-igual-ao-total-de-casas-decimais">Especificando quantidade de dígitos igual ao total de casas decimais<a class="anchor-link" href="#Especificando-quantidade-de-d%C3%ADgitos-igual-ao-total-de-casas-decimais">¶</a></h4><ul>
+<li><strong>Exemplos</strong>:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 1 - Utilizando o método format utilizado a partir da versão Python 3.x</span>
+<span class="c1"># Especificando a quantidade de formatação igual a quantidade de casas decimais</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                          <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.5}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>          <span class="c1"># formatando a saída para 5 dígitos 1923.9</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1923.9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 2 - Utilizando a saída formatada utilizada a partir da versão 3.7</span>
+<span class="c1"># Especificando a quantidade de formatação igual a quantidade de casas decimais</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                          <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.5</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                  <span class="c1"># formatando a saída para 5 dígitos 1923.9</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1923.9
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Especificando-quantidade-de-dígitos-inferior-ao-total-de-casas-decimais">Especificando quantidade de dígitos inferior ao total de casas decimais<a class="anchor-link" href="#Especificando-quantidade-de-d%C3%ADgitos-inferior-ao-total-de-casas-decimais">¶</a></h4><ul>
+<li><strong>Exemplos</strong>:</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 3 - Utilizando o método format utilizado a partir da versão Python 3.x</span>
+<span class="c1"># Especificando a quantidade de formatação menor do que a quantidade de casas decimais</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                          <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>          <span class="c1"># formatando a saída para 3 dígitos 1.92e+03</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1.92e+03
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 4 - Utilizando a saída formatada utilizada a partir da versão 3.7</span>
+<span class="c1"># Especificando a quantidade de formatação menor do que a quantidade de casas decimais</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                          <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                  <span class="c1"># formatando a saída para 3 dígitos 1.92e+03</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1.92e+03
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Especificando-a-quantidade-exata-de-dígitos-após-o-ponto.-Indicando-quantas-casas-decimais-desejamos-exibir.">Especificando a quantidade exata de dígitos após o ponto. Indicando quantas casas decimais desejamos exibir.<a class="anchor-link" href="#Especificando-a-quantidade-exata-de-d%C3%ADgitos-ap%C3%B3s-o-ponto.-Indicando-quantas-casas-decimais-desejamos-exibir.">¶</a></h4><ul>
+<li><p>Para definir um nível de precisão exato de casas decimais, utiliza-se os dois-pontos ( : ), seguido por um ponto decimal ( . ), junto com algum número inteiro representando o grau de precisão e acrescentado da letra ( f ). Exemplo: <strong>:.3f</strong>. Obteremos 3 casas decimais de precisão.</p>
+</li>
+<li><p><strong>Exemplos</strong>:</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 5 - Utilizando a saída formatada utilizada a partir da versão 3.7</span>
+<span class="c1"># Especificando a quantidade de formatação exata de casas decimais</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                           <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                  <span class="c1"># formatando a saída para 3 dígitos 1923.876</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1923.876
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>Observação</strong>: Caso não seja informado a quantidade de casas decimais, o padrão do f, é 6 dígitos de precisão.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Especificando-um-separador-de-dígitos-para-números-inteiros">Especificando um separador de dígitos para números inteiros<a class="anchor-link" href="#Especificando-um-separador-de-d%C3%ADgitos-para-n%C3%BAmeros-inteiros">¶</a></h4><ul>
+<li>Para definir um separador, utiliza-se os dois-pontos ( : ), seguido por uma vírgula ( , ) ou um underline ( <em> ). Exemplo: <strong>:,</strong> ou **:</em>**. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 6 - Utilizando o separador com ,</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">192387635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                          <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                   <span class="c1"># utilizando a vírgula</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>192387635
+192,387,635
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 7 - Utilizando o separador com _</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">192387635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                           <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">_</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                    <span class="c1"># utilizando o underline</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>192387635
+192_387_635
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Especificando-um-separador-de-dígitos-para-números-flutuantes">Especificando um separador de dígitos para números flutuantes<a class="anchor-link" href="#Especificando-um-separador-de-d%C3%ADgitos-para-n%C3%BAmeros-flutuantes">¶</a></h4><ul>
+<li>Para definir um separador, utiliza-se os dois-pontos ( : ), seguido por uma vírgula ( , ) ou um underline ( <em> ), seguido por um ponto decimal ( . ), junto com algum número inteiro representando o grau de precisão   e acrescentado da letra ( f ) . Exemplo: <strong>:,.3f</strong> ou **:</em>.3f**. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 8 - Utilizando o separador com ,</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                             <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">,.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                   <span class="c1"># utilizando a vírgula com precisão de 3 casas decimais</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1,923.876
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 9 - Utilizando o separador com _</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1923.87635</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                              <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">_.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                    <span class="c1"># utilizando o underline com precisão de 3 casas decimais</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1923.87635
+1_923.876
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Especificando-a-formatação-de-um-número-como-uma-porcentagem">Especificando a formatação de um número como uma porcentagem<a class="anchor-link" href="#Especificando-a-formata%C3%A7%C3%A3o-de-um-n%C3%BAmero-como-uma-porcentagem">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 10 - Utilizando o % como saída</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">47</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                              <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Porcentagem da divisão de x/y é igual a </span><span class="si">{</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># utilizando 2 dígitos como decimais</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>29
+47
+Porcentagem da divisão de x/y é igual a 61.70%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 10 - Utilizando o % como saída</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">29</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">47</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                              <span class="c1"># sem formatação</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Porcentagem da divisão de x/y é igual a </span><span class="si">{</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="si">:</span><span class="s2">.3%</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># utilizando 3 dígitos como decimais</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>29
+47
+Porcentagem da divisão de x/y é igual a 61.702%
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Referências">Referências<a class="anchor-link" href="#Refer%C3%AAncias">¶</a></h3><ul>
 <li>Esta aula foi elaborada a partir do conteúdo disponibilizado no <a href="https://docs.python.org/3/">Site Oficial</a>.</li>
 </ul>
