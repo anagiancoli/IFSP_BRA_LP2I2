@@ -14496,6 +14496,309 @@ Lista diversos1 (cópia): ['Ana', 10, 40, 'Paula']
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-comprehensions-ou-Compreensão-de-Listas-com-números-e-strings">List comprehensions ou Compreensão de Listas com números e strings<a class="anchor-link" href="#List-comprehensions-ou-Compreens%C3%A3o-de-Listas-com-n%C3%BAmeros-e-strings">¶</a></h3><ul>
+<li><p>De acordo com <a href="https://pythonacademy.com.br/blog/list-comprehensions-no-python">Python Academy</a>, segue alguns exemplos para melhor entendimento.</p>
+</li>
+<li><p>Permite a criação de novas listas de uma forma rápida a partir de outras listas existentes.</p>
+</li>
+<li>Sintaxe básica:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">expr</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]</span>
+</pre></div>
+<ul>
+<li>Aplicar a <strong>expr</strong> em cada <strong>item</strong> da <strong>lista</strong>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo sem o uso de Compreensão de listas com números</span>
+<span class="c1"># Dada uma lista de números inteiros até 10. Gere uma lista com os seus quadrados.</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo com o uso de Compreensão de listas com números</span>
+<span class="c1"># Dada uma lista de números inteiros até 10. Gere uma lista com os seus quadrados.</span>
+
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo sem o uso de Compreensão de listas com strings</span>
+<span class="c1"># Dado uma lista de nomes e gere uma nova lista com todos os nomes em maiúsculo.</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ana"</span><span class="p">,</span> <span class="s2">"paula"</span><span class="p">,</span> <span class="s2">"Müller"</span><span class="p">,</span> <span class="s2">"giancoli"</span><span class="p">]</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="n">resultado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['ana', 'paula', 'Müller', 'giancoli']
+['ANA', 'PAULA', 'MÜLLER', 'GIANCOLI']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo com o uso de Compreensão de listas com strings</span>
+<span class="c1"># Dado uma lista de nomes e gere uma nova lista com todos os nomes em maiúsculo.</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ana"</span><span class="p">,</span> <span class="s2">"paula"</span><span class="p">,</span> <span class="s2">"Müller"</span><span class="p">,</span> <span class="s2">"giancoli"</span><span class="p">]</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['ana', 'paula', 'Müller', 'giancoli']
+['ANA', 'PAULA', 'MÜLLER', 'GIANCOLI']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-comprehensions-ou-Compreensão-de-Listas-com-estrutura-de-decisão">List comprehensions ou Compreensão de Listas com estrutura de decisão<a class="anchor-link" href="#List-comprehensions-ou-Compreens%C3%A3o-de-Listas-com-estrutura-de-decis%C3%A3o">¶</a></h3><ul>
+<li>Sintaxe básica:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">expr</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span> <span class="k">if</span> <span class="n">cond</span><span class="p">]</span>
+</pre></div>
+<ul>
+<li>Aplicar a <strong>expr</strong> em cada <strong>item</strong> da <strong>lista</strong> caso <strong>cond</strong> (condição) seja satisfeita.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Dado uma lista de números inteiros até 20. Gere uma nova lista somente com os números pares.</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Identificando os múltiplos comuns entre 5 e 6 dentro de uma lista de 100 números inteiros. </span>
+<span class="c1"># Isto é, o número que for divisível por 5 e 6 ao mesmo tempo, será considerado para a nova lista.</span>
+<span class="c1"># A lista inicial tem 100 números a partir do 0.</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 30, 60, 90]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="List-comprehensions-ou-Compreensão-de-Listas-com-estrutura-de-decisão-e-else">List comprehensions ou Compreensão de Listas com estrutura de decisão e else<a class="anchor-link" href="#List-comprehensions-ou-Compreens%C3%A3o-de-Listas-com-estrutura-de-decis%C3%A3o-e-else">¶</a></h3><ul>
+<li>Sintaxe básica:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">resultado_if</span> <span class="k">if</span> <span class="n">expr</span> <span class="k">else</span> <span class="n">resultado_else</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]</span>
+</pre></div>
+<ul>
+<li>Para cada <strong>item</strong> da <strong>lista</strong>, aplicar o <strong>resultado_if</strong> caso a expressão <strong>expr</strong> seja <strong>verdadeira</strong>. Caso contrário, aplicar o resultado_else.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Criar uma lista que contenha “1” quando determinado número for múltiplo de 5 e “0” caso contrário.</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'1'</span> <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">'0'</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Importantes">Importantes<a class="anchor-link" href="#Importantes">¶</a></h3><ul>
 <li>Dada a lista:<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </pre></div>
@@ -14509,7 +14812,7 @@ Lista diversos1 (cópia): ['Ana', 10, 40, 'Paula']
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importante</span>
@@ -14553,7 +14856,7 @@ Filtro aplicado com valores maiores ou iguais a 10: [0, 2, 4, 6, 8]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Importantes">Importantes<a class="anchor-link" href="#Importantes">¶</a></h3><ul>
+<ul>
 <li>Dada a lista:<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s1">' laboratório'</span><span class="p">,</span> <span class="s1">'carnaval '</span><span class="p">,</span> <span class="s1">' ale gria '</span><span class="p">,</span> <span class="s1">' mágica '</span><span class="p">]</span>
 </pre></div>

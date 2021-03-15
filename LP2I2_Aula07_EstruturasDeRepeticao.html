@@ -14248,6 +14248,61 @@ Carmen 6
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exemplo-sem-utilizar-estrutura-de-repetição">Exemplo sem utilizar estrutura de repetição<a class="anchor-link" href="#Exemplo-sem-utilizar-estrutura-de-repeti%C3%A7%C3%A3o">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Uma lista de idades e deseja-se calcular a idade média. Sem utilizar estrutura de repetição.</span>
+
+<span class="n">idades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">idades</span><span class="p">)</span>
+<span class="n">quantidade</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">idades</span><span class="p">)</span>
+
+<span class="c1"># Sem adequação das casas decimais e utilizando uma variável para armazenar a média.</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">total</span><span class="o">/</span><span class="n">quantidade</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Média sem adequação casas decimais: "</span><span class="p">,</span> <span class="n">media</span><span class="p">)</span>         
+
+<span class="c1"># Com adequação das casas decimais.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Média com adequação casas decimais: </span><span class="si">{</span><span class="n">media</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>                
+
+<span class="c1"># Ou simplesmente print(total/quantidade) diretamente </span>
+<span class="c1"># sem a necessidade de variável media, já com a saída formatada.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Média sem variável media: </span><span class="si">{</span><span class="n">total</span><span class="o">/</span><span class="n">quantidade</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>     
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Média sem adequação casas decimais:  49.666666666666664
+Média com adequação casas decimais: 49.67
+Média sem variável media: 49.67
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="4.-Break,-Continue,-Pass,-Else">4. Break, Continue, Pass, Else<a class="anchor-link" href="#4.-Break,-Continue,-Pass,-Else">¶</a></h3><h4 id="BREAK:-A-instrução-break-faz-a-finalização-do-bloco."><strong>BREAK</strong>: A instrução <strong>break</strong> faz a finalização do bloco.<a class="anchor-link" href="#BREAK:-A-instru%C3%A7%C3%A3o-break-faz-a-finaliza%C3%A7%C3%A3o-do-bloco.">¶</a></h4><h4 id="CONTINUE:-A-instrução-continue,-continua-na-próxima-iteração-do-loop."><strong>CONTINUE</strong>: A instrução <strong>continue</strong>, continua na próxima iteração do loop.<a class="anchor-link" href="#CONTINUE:-A-instru%C3%A7%C3%A3o-continue,-continua-na-pr%C3%B3xima-itera%C3%A7%C3%A3o-do-loop.">¶</a></h4><h4 id="PASS:-A-declaração-pass-não-faz-nada.-Ele-pode-ser-usado-quando-uma-declaração-é-requerida-sintaticamente,-mas-o-programa-não-requer-nenhuma-ação."><strong>PASS</strong>: A declaração <strong>pass</strong> não faz nada. Ele pode ser usado quando uma declaração é requerida sintaticamente, mas o programa não requer nenhuma ação.<a class="anchor-link" href="#PASS:-A-declara%C3%A7%C3%A3o-pass-n%C3%A3o-faz-nada.-Ele-pode-ser-usado-quando-uma-declara%C3%A7%C3%A3o-%C3%A9-requerida-sintaticamente,-mas-o-programa-n%C3%A3o-requer-nenhuma-a%C3%A7%C3%A3o.">¶</a></h4><ul>
 <li>Em <strong>declarações de loop (while e for)</strong> podem ter uma cláusula <strong>else</strong>, sendo <em>executado quando o loop termina por esgotamento da lista</em>, no caso do <strong>FOR</strong>.  </li>
 <li>Ou <em>quando a condição se torna falsa</em>, no caso do <strong>WHILE</strong>.  </li>
@@ -14361,6 +14416,234 @@ Número ímpar = 9.
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.1.-Exemplo-utilizando-break">4.1. Exemplo utilizando break<a class="anchor-link" href="#4.1.-Exemplo-utilizando-break">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Código simples sem break</span>
+
+<span class="c1"># Exemplo 1 </span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">jogar</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Deseja jogar? (S-sim e N-não)"</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>        <span class="c1"># &lt;----- Uma vez</span>
+
+<span class="k">while</span> <span class="n">jogar</span> <span class="o">==</span> <span class="s1">'S'</span><span class="p">:</span>
+    <span class="n">num_user</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Informe seu número inteiro: "</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">num_user</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, acertou!!"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">num_user</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, você errou por um!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Desculpe, está incorreto!! Tente outra vez!"</span><span class="p">)</span>        
+    <span class="n">jogar</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Deseja jogar? (S-sim e N-não)"</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># &lt;----- Segunda vez</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: -8
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 9
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 6
+Uau, você errou por um!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 2
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 7
+Uau, acertou!!
+Deseja jogar? (S-sim e N-não)n
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Código refatorado, porém faltando algo ... O que?</span>
+<span class="c1"># Perceba que o código não foi interrompido mesmo utilizando o n-não. O que está faltando???</span>
+<span class="c1"># O código precisou ser interrompido!</span>
+
+<span class="c1"># Exemplo 2 </span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>                                                    <span class="c1"># &lt;----- jogar == 's' substituído pelo True</span>
+    <span class="n">jogar</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Deseja jogar? (S-sim e N-não)"</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>     <span class="c1"># &lt;----- Uma vez -&gt; a outra linha foi removida</span>
+    <span class="n">num_user</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Informe seu número inteiro: "</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">num_user</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, acertou!!"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">num_user</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, você errou por um!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Desculpe, está incorreto!! Tente outra vez!"</span><span class="p">)</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: -8
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 9
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 6
+Uau, você errou por um!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 2
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 7
+Uau, acertou!!
+Deseja jogar? (S-sim e N-não)n
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-a0ca5bd9e819&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>                                                    <span class="ansi-red-fg"># &lt;----- jogar == 's' substituído pelo True</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span>     jogar <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Deseja jogar? (S-sim e N-não)"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>upper<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>     <span class="ansi-red-fg"># &lt;----- Uma vez -&gt; a outra linha foi removida</span>
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg">     </span>num_user <span class="ansi-blue-fg">=</span> int<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Informe seu número inteiro: "</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">if</span> num <span class="ansi-blue-fg">==</span> num_user<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span>         print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Uau, acertou!!"</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/JupyterNotebook/jupyter/lib/python3.7/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    861</span>             self<span class="ansi-blue-fg">.</span>_parent_ident<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    862</span>             self<span class="ansi-blue-fg">.</span>_parent_header<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">--&gt; 863</span><span class="ansi-red-fg">             </span>password<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    864</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    865</span> 
+
+<span class="ansi-green-fg">~/JupyterNotebook/jupyter/lib/python3.7/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">_input_request</span><span class="ansi-blue-fg">(self, prompt, ident, parent, password)</span>
+<span class="ansi-green-intense-fg ansi-bold">    902</span>             <span class="ansi-green-fg">except</span> KeyboardInterrupt<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    903</span>                 <span class="ansi-red-fg"># re-raise KeyboardInterrupt, to truncate traceback</span>
+<span class="ansi-green-fg">--&gt; 904</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> KeyboardInterrupt<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Interrupted by user"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">from</span> <span class="ansi-green-fg">None</span>
+<span class="ansi-green-intense-fg ansi-bold">    905</span>             <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    906</span>                 self<span class="ansi-blue-fg">.</span>log<span class="ansi-blue-fg">.</span>warning<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Invalid Message:"</span><span class="ansi-blue-fg">,</span> exc_info<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: Interrupted by user</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Código refatorado corrigido.</span>
+<span class="c1"># Foi acrescentado o break que interrompe o ciclo de repetição quando é executado. </span>
+<span class="c1"># Jogo encerrado corretamente.</span>
+
+<span class="c1"># Exemplo 3 </span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>                                                    <span class="c1"># &lt;----- jogar == 's' substituído pelo True</span>
+    <span class="n">jogar</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Deseja jogar? (S-sim e N-não)"</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>     <span class="c1"># &lt;----- Uma vez -&gt; a outra linha foi removida</span>
+    <span class="k">if</span> <span class="n">jogar</span> <span class="o">==</span> <span class="s1">'N'</span><span class="p">:</span>                                           <span class="c1"># &lt;----- Adicionado</span>
+        <span class="k">break</span>                                                  <span class="c1"># &lt;----- Adicionado</span>
+    <span class="n">num_user</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Informe seu número inteiro: "</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">num_user</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, acertou!!"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num</span> <span class="o">-</span> <span class="n">num_user</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Uau, você errou por um!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Desculpe, está incorreto!! Tente outra vez!"</span><span class="p">)</span>        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: -8
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 9
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)S
+Informe seu número inteiro: 6
+Uau, você errou por um!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 2
+Desculpe, está incorreto!! Tente outra vez!
+Deseja jogar? (S-sim e N-não)s
+Informe seu número inteiro: 7
+Uau, acertou!!
+Deseja jogar? (S-sim e N-não)n
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

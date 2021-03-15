@@ -13274,6 +13274,7 @@ Nome Completo: Ana Paula Müller Giancoli
 <li>O <strong>método</strong> recebe 3 parâmetros: <strong>self, nome e idade</strong>:  <ul>
 <li><strong>self</strong>: <em>é um parâmetro obrigatório na definição de um método e deve estar sempre antes dos demais parâmetros</em>.  <ul>
 <li>Quando o Python chama o <strong>método _<strong>_init__</strong>(self)</strong> para criar uma instância de Cachorro, <strong>a chamada passará o argumento self automaticamente</strong>.  </li>
+<li><strong>Sempre que definir um método dentro de uma classe</strong>, o mesmo deve receber como primeiro valor, o <strong>self</strong>.</li>
 <li>Toda <strong>chamada de método associada a uma classe passa o argumento self</strong>.  </li>
 <li>O <strong>argumento é uma referência à própria instância automaticamente</strong>, permitindo acesso aos atributos e métodos da instância individual da classe.  </li>
 </ul>
@@ -13341,7 +13342,11 @@ O meu cachorro tem 10 anos.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.4.-Chamando-Métodos--de-uma-Instância-criada-meu_cachorro-de-uma-classe-Cachorro(-)">1.4. Chamando Métodos  de uma Instância criada meu_cachorro de uma classe Cachorro( )<a class="anchor-link" href="#1.4.-Chamando-M%C3%A9todos--de-uma-Inst%C3%A2ncia-criada-meu_cachorro-de-uma-classe-Cachorro(-)">¶</a></h3><ul>
-<li><strong>Colocando mão na massa!!</strong>  </li>
+<li><strong>Colocando mão na massa!!</strong> </li>
+<li>Para executar ou chamar um método de uma instância, é necessário que o objeto da instância tenha sido criado, como no caso:<ul>
+<li><strong>meu_cachorro = Cachorro('willie', 10)</strong> &gt;&gt; foi criado.</li>
+</ul>
+</li>
 <li><strong>meu_cachorro</strong> é a instância criada a partir da <strong>classe Cachorro()</strong>.  <ul>
 <li>Acessando os <strong>métodos sentar() e rolar()</strong>: <strong>meu_cachorro.sentar()</strong>, <strong>meu_cachorro.rolar()</strong>.  </li>
 <li>Procura o <strong>método sentar()</strong> na <strong>classe Cachorro()</strong> e executa o código. E o <strong>método rolar()</strong> do mesmo jeito.</li>
@@ -14142,6 +14147,117 @@ Esse carro tem 133 milhas.
 Esse carro tem 133 milhas.
 Você está tentando reduzir o valor do Hodômetro!
 Esse carro tem 133 milhas.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importante">Importante<a class="anchor-link" href="#Importante">¶</a></h3><h3 id="Métodos-mágicos">Métodos mágicos<a class="anchor-link" href="#M%C3%A9todos-m%C3%A1gicos">¶</a></h3><ul>
+<li><p>Método <strong>__str__(self)</strong>:</p>
+<ul>
+<li>É usado para retornar uma representação de string de um objeto.</li>
+</ul>
+</li>
+<li><p>Método <strong>__repr__(self)</strong>:</p>
+<ul>
+<li>É usado para retornar uma representação de um objeto e utilizado normalmente em debug para saber qual é o objeto que está sendo retornado.</li>
+</ul>
+</li>
+<li><p>Se ambos estiverem no código, o Python entende que ao solicitar um print() do objeto, desejamos exibir para o usuário, logo, ele utilizará o <strong>__str__</strong>.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Imprimindo um objeto</span>
+<span class="c1"># O método __str__ será usado para imprimir o objeto como uma string.</span>
+<span class="k">class</span> <span class="nc">Pessoa</span><span class="p">:</span>
+    
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">idade</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="n">idade</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'Pessoa </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1"> com idade </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1">.'</span>
+
+
+<span class="n">nome_ana</span> <span class="o">=</span> <span class="n">Pessoa</span><span class="p">(</span><span class="s1">'Ana'</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome_ana</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Pessoa Ana com idade 45.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Imprimindo um objeto</span>
+<span class="c1"># O método __repr__ será usado para imprimir a representação de um objeto. Os símbolos de menor e maior serve </span>
+<span class="c1"># para indicar aos programadores que será exibido um objeto daquela classe.</span>
+<span class="k">class</span> <span class="nc">Pessoa</span><span class="p">:</span>
+    
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nome</span><span class="p">,</span> <span class="n">idade</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nome</span> <span class="o">=</span> <span class="n">nome</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idade</span> <span class="o">=</span> <span class="n">idade</span>
+      
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'&lt;Pessoa(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nome</span><span class="si">}</span><span class="s1">,</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">idade</span><span class="si">}</span><span class="s1">)&gt;.'</span>
+
+<span class="n">nome_ana</span> <span class="o">=</span> <span class="n">Pessoa</span><span class="p">(</span><span class="s1">'Ana'</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome_ana</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;Pessoa(Ana,45)&gt;.
 </pre>
 </div>
 </div>
