@@ -15,8 +15,6 @@
 <div align="right">
 Bons estudos! 👋 
 </div>
-
-teste
   
 <div>
   Profa. Ana Paula Müller Giancoli
