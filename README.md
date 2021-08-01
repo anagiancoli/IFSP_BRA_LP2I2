@@ -1,7 +1,25 @@
-## IFSP_BRA_LP2I2
+## Repositório IFSP_BRA_LP2I2
 
-Aulas do Componente Curricular Linguagem de Programação II do Curso Análise e Desenvolvimento de Sistemas.  
+#### Neste local, você encontra:
 
-Para ler os conteúdos publicados, faça o download e abra em qualquer navegador.
+- 🗒️ Aulas do Componente Curricular Linguagem de Programação II do Curso Análise e Desenvolvimento de Sistemas, ministradas no Instituto Federal de Educação, Ciência e Tecnologia (IFSP), no campus de Bragança Paulista (BRA).  
 
-Qualquer eventual dúvida, entre em contato por e-mail: paulagiancoli@ifsp.edu.br
+- 📖 Para ter uma leitura agradável, efetue o _download_ do repositório e abra os arquivos em seu navegador preferido.
+
+- 📤 Qualquer eventual dúvida, entre em contato por e-mail: _paulagiancoli@ifsp.edu.br_.
+
+
+<div><img align="right" height="149" width="150" alt="Ana" src="https://cdn.discordapp.com/attachments/871199836752457749/871201441715474432/Ana.png" />
+</div>
+
+<div align="right">
+Bons estudos! 👋 
+</div>
+
+  ##
+  
+<div>
+  Profa. Ana Paula Müller Giancoli
+  <a href="https://anagiancoli.github.io"><img align="center" alt="Ana-Github" height="30" width="40" src='https://github.com/devicons/devicon/blob/master/icons/github/github-original-wordmark.svg'></a>
+</div>
+  
