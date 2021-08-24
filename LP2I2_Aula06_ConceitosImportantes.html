@@ -15552,10 +15552,23 @@ a.anchor-link {
 </ul>
 </li>
 </ul>
-<h4 id="Função/Método-replace(valor-substituído,-valor-a-substituir)"><strong>Função/Método replace(valor substituído, valor a substituir)</strong><a class="anchor-link" href="#Fun%C3%A7%C3%A3o/M%C3%A9todo-replace(valor-substitu%C3%ADdo,-valor-a-substituir)">¶</a></h4><ul>
-<li>Podemos utilizar o <strong>método replace(valor substituído, valor a substituir)</strong> para efetuar a atribuição. </li>
+<h4 id="Função/Método-replace(valor-substituído,-valor-a-substituir,-quantidade)"><strong>Função/Método replace(valor substituído, valor a substituir, quantidade)</strong><a class="anchor-link" href="#Fun%C3%A7%C3%A3o/M%C3%A9todo-replace(valor-substitu%C3%ADdo,-valor-a-substituir,-quantidade)">¶</a></h4><ul>
+<li>Podemos utilizar o <strong>método replace(valor substituído, valor a substituir, quantidade)</strong> para efetuar a atribuição. </li>
 <li>Porém, <strong><em>atenção</em></strong>, o <strong>método não efetua a substituição na origem</strong>, ele gera uma <strong>cópia</strong> com a modificação.</li>
+<li><strong>Quantidade</strong> representa o número de vezes que o <strong>valor substituído</strong> selecionado deve ser buscado. Esta quantidade poderá ser omitida, assim, a substituição ocorrerá em <strong>todos</strong> os valores sem exceção.</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">'Ana Paula Müller Giancoli'</span>
+
+<span class="c1"># Omitindo a quantidade</span>
+<span class="n">nome</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">nome</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">'u'</span><span class="p">)</span>
+<span class="c1"># Saída:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'Anu Puulu Müller Giuncoli'</span>
+
+<span class="c1"># Indicando a quantidade</span>
+<span class="n">nome</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">nome</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">'u'</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Saída:</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s1">'Anu Puula Müller Giancoli'</span>
+</pre></div>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">

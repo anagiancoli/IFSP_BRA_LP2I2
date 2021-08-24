@@ -14380,6 +14380,104 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 1 - Gerando a Sequência de Fibonacci.</span>
+<span class="c1"># Porém, utilizando atribuicao simples e a estrutura de repetição WHILE.</span>
+<span class="c1"># Considerando o limite máximo 1000.</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'*** Sequencia de Fibonacci ***'</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>*** Sequencia de Fibonacci ***
+0,1,2,4,8,16,32,64,128,256,512,</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="O-que-aconteceu?-Por-que-a-sequência-não-foi-gerda-corretamente?">O que aconteceu? Por que a sequência não foi gerda corretamente?<a class="anchor-link" href="#O-que-aconteceu?-Por-que-a-sequ%C3%AAncia-n%C3%A3o-foi-gerda-corretamente?">¶</a></h4><ul>
+<li>Quando utilizamos a <strong>atribuição múltipla</strong>, ele efetua o cálculo de todos os elementos da direita e depois atribui à esquerda. <strong>Logo, x tem o mesmo valor</strong>.</li>
+<li>Quando utilizamos a <strong>atribuição simples</strong>, na segunda parte, o valor de x é alterado antes de ser feito o cálculo seguinte. <strong>Logo, o valor de x é diferente</strong>.</li>
+<li>Para solucionar esta questão, basta criarmos uma terceira variável como auxiliar na troca de valores.</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exemplo 1 - Gerando a Sequência de Fibonacci.</span>
+<span class="c1"># Porém, utilizando atribuicao simples e a estrutura de repetição WHILE.</span>
+<span class="c1"># Considerando o limite máximo 1000.</span>
+<span class="c1"># Corrigindo o ERRO gerado propositalmente. Utilizando a variável a como auxliar.</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'*** Sequencia de Fibonacci ***'</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>*** Sequencia de Fibonacci ***
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
